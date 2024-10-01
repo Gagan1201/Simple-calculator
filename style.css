@@ -1,0 +1,126 @@
+@import url('https://fonts.cdnfonts.com/css/calculator');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+    width: 100%;
+    border-radius: 1.75rem;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: rgb(38, 36, 36);
+}
+
+.normal-shadow {
+    box-shadow: -1rem 1rem 3rem rgb(52, 52, 52);
+}
+
+.neon-shadow {
+    box-shadow: 
+                0 0 1rem rgb(236, 153, 0),
+                0 0 4rem rgb(215, 140, 0),
+                0 0 6rem red;
+
+    border: 0.35rem solid rgb(255, 208, 0);
+    max-width: 25.7rem;
+    border-radius: 2rem;
+}
+
+
+.calculationarea {
+    border: none;
+    color: white;
+    height: 1.5em;
+    width: 100%;
+    background-color: rgb(63, 72, 72);
+    text-align: right;
+    font-weight: bolder;
+    font-size: 3rem;
+    font-family: 'Calculator';
+    padding: 1rem;
+    border-radius: 0.5rem;
+    outline: 0;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    display: flex;
+    background-color: rgb(51, 59, 59);
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.75em;
+    width: 100%;
+    font-family: 'Outfit';
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 10%;
+    color: white;
+}
+
+.btn:hover {
+    background-color: rgb(63, 72, 72);
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.symbol {
+    background-color: rgb(71, 80, 80);
+}
+
+.symbol:hover {
+    background-color: rgb(84, 94, 94);
+}
+
+.equal {
+    background-color: rgb(200, 130, 0);
+}
+
+.equal:hover {
+    background-color: rgb(180, 117, 1);
+}
+
+#clear {
+    grid-column: span 4;
+    border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 400px) {
+    .btn {
+        font-size: .85rem;
+    }
+
+    .calculationarea{
+        font-size: 2rem;
+    }
+}
+
+.toggle-coolness {
+    font-size: 2rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
